@@ -1,5 +1,11 @@
+import ItemList from "./ItemList";
+
 const ItemListContainer = () => {
-  return <p>This is my shop!</p>;
+  return (
+    <div>
+      <ItemList />
+    </div>
+  );
 };
 
 export default ItemListContainer;

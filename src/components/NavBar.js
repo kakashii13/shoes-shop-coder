@@ -2,7 +2,7 @@ import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <h1 className="navbar-brand">Shoes-Shop</h1>
         <div className="">
