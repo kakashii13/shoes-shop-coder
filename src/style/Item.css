@@ -1,0 +1,39 @@
+h5 {
+  font-size: 15px;
+}
+
+.card {
+  width: 250px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover p {
+  transition: all 0.1s;
+  top: 170px;
+}
+
+.card-img-container {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.shoe {
+  width: 200px;
+}
+
+.fav {
+  position: absolute;
+  top: 10px;
+}
+
+.card-body p {
+  background-color: #eceff0;
+  padding: 3px 5px 2px;
+  font-size: 13px;
+  border-radius: 3px;
+  position: absolute;
+  top: 175px;
+  left: 5px;
+}

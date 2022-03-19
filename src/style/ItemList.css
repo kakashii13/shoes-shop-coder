@@ -1,0 +1,26 @@
+.ItemList {
+  margin: 20px 0;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, 250px);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .ItemList {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
+@media screen and (min-width: 800px) {
+  .ItemList {
+    grid-template-columns: repeat(3, 250px);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .ItemList {
+    grid-template-columns: repeat(5, 250px);
+  }
+}

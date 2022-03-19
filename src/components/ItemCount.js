@@ -17,19 +17,13 @@ const ItemCount = () => {
   };
 
   return (
-    <div
-      style={{
-        padding: "10px",
-        // width: "200px",
-        textAlign: "center",
-      }}
-    >
+    <div className="d-flex my-4 align-items-center" style={{ width: "300px" }}>
       <div
+        className="d-flex justify-content-around align-items-center my-2"
         style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          margin: "10px 0",
+          height: "30px",
+          marginRight: "10px",
+          width: "80px",
           border: "1px solid #ddd",
           borderRadius: "4px",
         }}
@@ -54,7 +48,12 @@ const ItemCount = () => {
           +
         </span>
       </div>
-      <button className="btn btn-primary">Agregar al carrito</button>
+      <button
+        className="btn btn-primary"
+        style={{ height: "auto", padding: "2px 10px" }}
+      >
+        Agregar al carrito
+      </button>
     </div>
   );
 };

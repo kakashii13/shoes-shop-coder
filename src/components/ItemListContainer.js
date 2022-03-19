@@ -2,7 +2,7 @@ import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
   return (
-    <div>
+    <div className="container-fluid">
       <ItemList />
     </div>
   );

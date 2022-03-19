@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getFetch from "../helpers/getFetch";
 import Item from "./Item";
+import "../style/ItemList.css";
 
 const ItemList = () => {
   const [items, setItems] = useState([]);
@@ -8,15 +9,7 @@ const ItemList = () => {
     getFetch.then((resp) => setItems(resp)).catch((err) => console.log(err));
   }, []);
   return (
-    <ul
-      style={{
-        margin: "20px 0",
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gridTemplateRow: "repeat(5, 1fr)",
-        gridGap: "10px",
-      }}
-    >
+    <ul className="ItemList">
       {items.map((item) => (
         <Item
           key={item.id}

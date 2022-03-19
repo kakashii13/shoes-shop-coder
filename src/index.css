@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ubuntu+Mono&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  height: 100vh;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
