@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const ItemCount = () => {
-  const [state, setState] = useState(1);
+const ItemCount = ({ setAddCart }) => {
+  const [state, setState] = useState(0);
   const stock = 5;
 
   const handleAdd = () => {
@@ -13,6 +13,12 @@ const ItemCount = () => {
   const handleLess = () => {
     if (!state < 1) {
       setState(state - 1);
+    }
+  };
+
+  const onAddCart = () => {
+    if (state != 0) {
+      setAddCart(true);
     }
   };
 
@@ -49,7 +55,8 @@ const ItemCount = () => {
         </span>
       </div>
       <button
-        className="btn btn-primary"
+        onClick={onAddCart}
+        className="btn btn-warning"
         style={{ height: "auto", padding: "2px 10px" }}
       >
         Agregar al carrito

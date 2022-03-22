@@ -6,6 +6,8 @@ const productos = [
     sizes: ["40", "42", "43"],
     pictureUrl:
       "https://solodeportes-9bvc3m9qgmf6g9x.stackpathdns.com/media/catalog/product/cache/faae2c37ab1d315e4b697a7f62b421b7/z/a/zapatillas-adidas-lite-racer-rebold-negra-100010gw2395001-1.jpg",
+    pictureGrandUrl:
+      "https://solodeportes-9bvc3m9qgmf6g9x.stackpathdns.com/media/catalog/product/cache/3cb7d75bc2a65211451e92c5381048e9/z/a/zapatillas-nike-air-max-sc-gris-510010cw4555007-1.jpg",
   },
   {
     id: 1,

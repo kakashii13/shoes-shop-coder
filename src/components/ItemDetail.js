@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import getFetch from "../helpers/getFetch.js";
 import ItemCount from "./ItemCount.js";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../style/ItemDetail.css";
 
 const ItemDetail = () => {
   const [itemDetail, setItemDetail] = useState({});
+  const [addCart, setAddCart] = useState(false);
+  const [isSize, setIsSize] = useState(false);
   const { Id } = useParams();
   useEffect(() => {
     getFetch
@@ -28,7 +31,16 @@ const ItemDetail = () => {
             </li>
           ))}
         </ul>
-        <ItemCount />
+        {(!addCart && <ItemCount setAddCart={setAddCart} />) || (
+          <div>
+            <Link to="/cart">
+              <button className="btn btn-warning my-2 me-2">Ver carrito</button>
+            </Link>
+            <Link to="/">
+              <button className="btn btn-dark">Seguir comprando</button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

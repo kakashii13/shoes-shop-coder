@@ -1,7 +1,9 @@
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [cartAlert, setCartAlert] = useState(false);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -46,7 +48,7 @@ const NavBar = () => {
         </div>
       </div>
       <Link to="cart">
-        <CartWidget />
+        <CartWidget cartAlert={cartAlert} />
       </Link>
     </nav>
   );

@@ -11,6 +11,23 @@ const CartWidget = () => {
           right: "50%",
         }}
       />
+      <div
+        style={{
+          borderRadius: "50%",
+          background: "#FBCA2D",
+          color: "#000",
+          textAlign: "center",
+          // padding: "2px 6px",
+          width: "14px",
+          position: "absolute",
+          right: "49.7%",
+          top: "12px",
+          opacity: "0.9",
+          fontSize: "10px",
+        }}
+      >
+        1
+      </div>
     </div>
   );
 };
