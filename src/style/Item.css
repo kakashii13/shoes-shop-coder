@@ -5,7 +5,8 @@ h5 {
 .card {
   width: 250px;
   cursor: pointer;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #020202d7;
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .card:hover p {

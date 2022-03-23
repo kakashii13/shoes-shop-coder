@@ -43,7 +43,7 @@ const ItemDetail = () => {
         <p>Talle:</p>
         <ul className="detail-size">
           {itemDetail?.sizes?.map((size) => (
-            <li className="size" key={size}>
+            <li className="size" key={size} style={{ listStyle: "none" }}>
               {size}
             </li>
           ))}
