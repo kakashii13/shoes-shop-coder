@@ -14,7 +14,7 @@ const Item = ({ id, title, price, pictureUrl }) => {
         </div>
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p>{price}</p>
+          <p>$ {price}</p>
         </div>
       </li>
     </Link>

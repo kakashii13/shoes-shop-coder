@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
-import getFetch from "../helpers/getFetch";
 import Item from "./Item";
 import "../style/ItemList.css";
+import { useCartContext } from "../context/CartContext";
 
 const ItemList = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    getFetch.then((resp) => setItems(resp)).catch((err) => console.log(err));
-  }, []);
+  const { items } = useCartContext();
   return (
     <ul className="ItemList">
       {items.map((item) => (

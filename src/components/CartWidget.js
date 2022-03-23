@@ -1,4 +1,12 @@
+import { useCartContext } from "../context/CartContext";
+
 const CartWidget = () => {
+  const { totalProducts } = useCartContext();
+
+  const totalProductsAlert = totalProducts
+    .map((prod) => prod.count)
+    .reduce((el, acc) => el + acc, null);
+
   return (
     <div>
       <img
@@ -17,7 +25,6 @@ const CartWidget = () => {
           background: "#FBCA2D",
           color: "#000",
           textAlign: "center",
-          // padding: "2px 6px",
           width: "14px",
           position: "absolute",
           right: "49.7%",
@@ -26,7 +33,7 @@ const CartWidget = () => {
           fontSize: "10px",
         }}
       >
-        1
+        {totalProductsAlert}
       </div>
     </div>
   );
