@@ -4,7 +4,7 @@ h3 {
 }
 
 .card-container {
-  width: 80%;
+  width: 90%;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ h3 {
 
 @media screen and (min-width: 605px) {
   .card-container {
-    width: 90%;
+    max-width: 1200px;
     padding: 10px 20px;
     display: flex;
     flex-direction: row;
@@ -23,6 +23,7 @@ h3 {
 
 .img-container {
   text-align: center;
+  position: relative;
 }
 
 .img-container img {
@@ -44,6 +45,22 @@ h3 {
   }
 }
 
+.img-container .arrow {
+  position: absolute;
+  bottom: 50%;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
+
 .info-container {
   padding: 10px 20px;
   width: 50%;
@@ -63,4 +80,8 @@ h3 {
   border: 1px solid #ddd;
   margin-right: 10px;
   padding: 4px 10px;
+}
+
+.img-cart {
+  border-radius: 50%;
 }

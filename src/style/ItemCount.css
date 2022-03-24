@@ -1,0 +1,17 @@
+.count-container {
+  height: 30px;
+  margin-right: 10px;
+  width: 80px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.count-container span {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-warning {
+  height: auto;
+  padding: 2px 10px;
+}

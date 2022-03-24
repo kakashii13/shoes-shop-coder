@@ -10,6 +10,7 @@ const ItemDetail = () => {
   const [itemDetail, setItemDetail] = useState({});
   const [addCart, setAddCart] = useState(false);
   const [isSize, setIsSize] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
   const { Id } = useParams();
 
   useEffect(() => {
@@ -32,10 +33,50 @@ const ItemDetail = () => {
     }
   };
 
+  const handleImage = (arrow) => {
+    if (arrow === "left") {
+      if (currentImage != 0) {
+        setCurrentImage((currentImage) => currentImage - 1);
+      }
+    } else {
+      if (currentImage < 2) {
+        setCurrentImage((currentImage) => currentImage + 1);
+      } else {
+        setCurrentImage(0);
+      }
+    }
+  };
+
   return (
-    <div className="card card-container">
+    <div className="card-container">
       <div className="img-container">
-        <img src={itemDetail?.pictureUrl} />
+        <img
+          className="arrow arrow-left"
+          src="https://icongr.am/fontawesome/angle-left.svg?size=30&color=currentColor"
+          onClick={() => handleImage("left")}
+        />
+        <img src={itemDetail?.picturesDetail?.[currentImage]} />
+        <img
+          className="arrow arrow-right"
+          src="https://icongr.am/fontawesome/angle-right.svg?size=30&color=currentColor"
+          onClick={() => handleImage("right")}
+        />
+        {itemDetail?.price > 14999 && (
+          <p
+            style={{
+              margin: "0",
+              position: "absolute",
+              top: "45px",
+              right: "-25px",
+              border: "1px solid #000",
+              padding: "2px 3px",
+              transform: "rotate(-90deg)",
+              letterSpacing: "2px",
+            }}
+          >
+            Envio Gratis
+          </p>
+        )}
       </div>
       <div className="info-container">
         <h3>{itemDetail?.title}</h3>

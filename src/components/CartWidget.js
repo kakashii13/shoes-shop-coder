@@ -4,7 +4,7 @@ const CartWidget = () => {
   const { totalProducts } = useCartContext();
 
   const totalProductsAlert = totalProducts
-    .map((prod) => prod.count)
+    ?.map((prod) => prod.count)
     .reduce((el, acc) => el + acc, null);
 
   return (
