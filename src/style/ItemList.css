@@ -21,6 +21,6 @@
 
 @media screen and (min-width: 1500px) {
   .ItemList {
-    grid-template-columns: repeat(5, 250px);
+    grid-template-columns: repeat(4, 350px);
   }
 }

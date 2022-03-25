@@ -1,7 +1,7 @@
 import React from "react";
 import { useCartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import "../style/ItemDetail.css";
+import "../style/CardDetail.css";
 import shopping from "../assets/shopping.jpg";
 
 const Cart = () => {
@@ -36,7 +36,11 @@ const Cart = () => {
         <div className="d-flex">
           <ul>
             {totalProducts.map((prod) => (
-              <li key={prod.id} className="card card-container my-4">
+              <li
+                key={prod.id}
+                className="card card-container my-4"
+                style={{ width: "600px", marginRight: "30px" }}
+              >
                 <span
                   style={{
                     fontWeight: "bold",

@@ -1,7 +1,7 @@
 import ItemDetail from "./ItemDetail";
 const ItemDetailContainer = () => {
   return (
-    <div className="d-flex justify-content-center my-5">
+    <div className="">
       <ItemDetail />
     </div>
   );

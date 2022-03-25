@@ -6,6 +6,7 @@ import Cart from "./components/Cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CartContextProvider from "./context/CartContext";
 import error404 from "./assets/404.jpg";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
               }
             />
           </Routes>
+          <Footer />
         </div>
       </CartContextProvider>
     </BrowserRouter>

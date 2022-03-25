@@ -1,0 +1,131 @@
+h3 {
+  width: 300px;
+  margin: 10px 0;
+}
+
+.card-container {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+@media screen and (min-width: 1000px) {
+  .card-container {
+    max-width: 1200px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.img-container {
+  text-align: center;
+  position: relative;
+}
+
+.img-container p {
+  font-size: 12px;
+  margin: 0;
+  padding: 2px 3px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  border: 1px solid #000;
+
+  letter-spacing: 2px;
+}
+
+.img-container img {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (min-width: 450px) {
+  .img-container img {
+    width: 400px;
+    height: 400px;
+  }
+  .img-container p {
+    transform: rotate(-90deg);
+    top: 45px;
+    right: -25px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .img-container img {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .img-container img {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+.img-container .arrow {
+  position: absolute;
+  bottom: 50%;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+.info-container {
+  margin-top: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container h3 {
+  font-size: 40px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.detail-size {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+}
+
+.size-container {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.size-container p {
+  margin: 3px;
+  font-weight: 600;
+}
+
+.size {
+  margin: 3px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  padding: 4px 10px;
+}
+
+.img-cart {
+  border-radius: 50%;
+}

@@ -23,7 +23,7 @@ const ItemCount = ({ onAddCart }) => {
         <span onClick={handleAdd}>+</span>
       </div>
       <button onClick={() => onAddCart(state)} className="btn btn-warning">
-        Agregar al carrito
+        Añadir al carrito
       </button>
     </div>
   );

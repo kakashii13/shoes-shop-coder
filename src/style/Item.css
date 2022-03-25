@@ -5,8 +5,12 @@ h5 {
 .card {
   width: 250px;
   cursor: pointer;
-  border: 1px solid #020202d7;
+  /* border: 1px solid #020202d7; */
   /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.shoe {
+  width: 200px;
 }
 
 .card:hover p {
@@ -18,10 +22,6 @@ h5 {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #ddd;
-}
-
-.shoe {
-  width: 200px;
 }
 
 .fav {
@@ -37,4 +37,23 @@ h5 {
   position: absolute;
   top: 175px;
   left: 5px;
+}
+
+@media screen and (min-width: 1500px) {
+  .card {
+    width: 350px;
+  }
+  .shoe {
+    width: 250px;
+  }
+  .card-body p {
+    top: 225px;
+    left: 5px;
+  }
+  .card:hover p {
+    top: 220px;
+  }
+  .fav {
+    right: 10px;
+  }
 }

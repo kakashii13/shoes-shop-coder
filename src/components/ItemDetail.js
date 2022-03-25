@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import ItemCount from "./ItemCount.js";
+import CardDetail from "./CardDetail.js";
 import { useCartContext } from "../context/CartContext.js";
 import "../style/ItemDetail.css";
 
@@ -48,65 +47,20 @@ const ItemDetail = () => {
   };
 
   return (
-    <div className="card-container">
-      <div className="img-container">
-        <img
-          className="arrow arrow-left"
-          src="https://icongr.am/fontawesome/angle-left.svg?size=30&color=currentColor"
-          onClick={() => handleImage("left")}
+    <div className="container">
+      <section>
+        <CardDetail
+          onAddCart={onAddCart}
+          handleImage={handleImage}
+          itemDetail={itemDetail}
+          addCart={addCart}
+          currentImage={currentImage}
         />
-        <img src={itemDetail?.picturesDetail?.[currentImage]} />
-        <img
-          className="arrow arrow-right"
-          src="https://icongr.am/fontawesome/angle-right.svg?size=30&color=currentColor"
-          onClick={() => handleImage("right")}
-        />
-        {itemDetail?.price > 14999 && (
-          <p
-            style={{
-              margin: "0",
-              position: "absolute",
-              top: "45px",
-              right: "-25px",
-              border: "1px solid #000",
-              padding: "2px 3px",
-              transform: "rotate(-90deg)",
-              letterSpacing: "2px",
-            }}
-          >
-            Envio Gratis
-          </p>
-        )}
-      </div>
-      <div className="info-container">
-        <h3>{itemDetail?.title}</h3>
-        <p>$ {itemDetail?.price}</p>
-        <p>Talle:</p>
-        <ul className="detail-size">
-          {itemDetail?.sizes?.map((size) => (
-            <li className="size" key={size} style={{ listStyle: "none" }}>
-              {size}
-            </li>
-          ))}
-        </ul>
-        {(!addCart && <ItemCount onAddCart={onAddCart} />) || (
-          <div style={{ width: "300px" }}>
-            <Link to="/">
-              <button className="btn btn-dark  my-2 me-2">
-                Seguir comprando
-              </button>
-            </Link>
-            <Link to="/cart">
-              <button
-                className="btn btn-warning"
-                style={{ padding: "6px 12px" }}
-              >
-                Ver carrito
-              </button>
-            </Link>
-          </div>
-        )}
-      </div>
+      </section>
+      <section className="description d-flex mx-2">
+        <h3>Descripción</h3>
+        <p>{itemDetail?.description}</p>
+      </section>
     </div>
   );
 };

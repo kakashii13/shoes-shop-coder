@@ -12,6 +12,8 @@ const productos = [
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa87ab713/products/AD_H04976/AD_H04976-2.JPG",
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwdf8265ed/products/AD_H04976/AD_H04976-3.JPG",
     ],
+    description:
+      "Las Zapatillas adidas Abaca te dan un estilo casual y elegante para que puedas combinarlas con todos tus looks. El exterior de textil es suave para brindarte mayor libertad en tus pisadas y la suela de caucho vulcanizada es más resistente. Lleva un calzado pensado para acompañarte en toda tu rutina.",
   },
   {
     id: 1,
@@ -26,6 +28,8 @@ const productos = [
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwee37926b/products/NI_DB0625-001/NI_DB0625-001-2.JPG",
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw25587ae6/products/NI_DB0625-001/NI_DB0625-001-3.JPG",
     ],
+    description:
+      "Para vos que te gusta estar en constante contacto con la naturaleza y disfrutar del aire con cada kilómetro que recorrés, las Zapatillas Nike Air Max 90 mantienen sus raíces originales incorporando materiales reciclados como lona con revestimientos y detalles de TPU que te dan ese look de los 90´s. La entre suela de espuma y la suela tipo wafle combinan el corcho y goma para darte mejor tracción; incorpora la unidad AirMax visible que amortigua cada pisada dándote una mejor experiencia al lugar donde vayas.",
   },
   {
     id: 2,
@@ -40,6 +44,8 @@ const productos = [
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw50a315c5/products/NI_DC9402-800/NI_DC9402-800-2.JPG",
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw53ee58d1/products/NI_DC9402-800/NI_DC9402-800-3.JPG",
     ],
+    description:
+      "Las Zapatillas Nike Air Max Pre-Day Nn están confeccionadas con materiales reciclables. Combinan el estilo vintage del running con nuevas tendencias. La unidad Nike Air en el talón brinda estabilidad y amortiguación de alto rendimiento en cada pisada.",
   },
   {
     id: 3,
@@ -96,6 +102,8 @@ const productos = [
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6dbf70df/products/NI_DJ1999-800/NI_DJ1999-800-2.JPG",
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw75607ab9/products/NI_DJ1999-800/NI_DJ1999-800-3.JPG",
     ],
+    description:
+      "Un clásico modelo inspirado en el tenis y en las canchas llega para vos que tenés un look urbano y casual, las Zapatillas Nike Court Legacy Canvas construidas en lona con costuras tradicionales te da el aspecto vintage que te gusta. Los detalles de corcho en la lengüeta y la placa clásica de la licencia Swoosh en la cinta de la parte posterior del talón te dan un estilo único y característico de la marca.",
   },
   {
     id: 7,
@@ -110,6 +118,8 @@ const productos = [
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwdd1dedc0/products/NI_BV9977-101/NI_BV9977-101-2.JPG",
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw865b547f/products/NI_BV9977-101/NI_BV9977-101-3.JPG",
     ],
+    description:
+      "Las zapatillas Nike Air Max 2090 celebran el 30° aniversario del lanzamiento de las Air Max 90. Su confección con malla ligera y transpirable para mantener los pies cómodos, mientras que la unidad Air Max proporciona una amortiguación más visible desde el costado en relación con el modelo original de aquellos años. La lengüeta con orificio abierto se combina con el cierre ajustable de agarre del talón para que puedas ponerte y quitarte el calzado con facilidad.",
   },
   {
     id: 8,
@@ -124,6 +134,8 @@ const productos = [
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw852b6bcc/products/AD_GZ7730/AD_GZ7730-2.JPG",
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwe39afb78/products/AD_GZ7730/AD_GZ7730-3.JPG",
     ],
+    description:
+      "El diseño innovador de estas zapatillas van de la mano con ofrecer comodidad en cada pisada. Las Zapatillas adidas Zx 2K Boost estan inspiradas en el legado innovador de adidas que comenzó en los años 80. La saga ZX se adentra en el futuro con una silueta que combina un diseño vanguardista con el retorno de energía de la tecnología Boost.",
   },
   {
     id: 9,
@@ -138,6 +150,8 @@ const productos = [
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw0e73c4e5/products/NI_DC9402-001/NI_DC9402-001-2.JPG",
       "https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwe8cfa409/products/NI_DC9402-001/NI_DC9402-001-3.JPG",
     ],
+    description:
+      "Las Zapatillas Nike Air Max Pre-Day Nn están confeccionadas con materiales reciclables. Combinan el estilo vintage del running con nuevas tendencias. La unidad Nike Air en el talón brinda estabilidad y amortiguación de alto rendimiento en cada pisada.",
   },
 ];
 
