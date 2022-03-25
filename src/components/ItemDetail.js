@@ -90,14 +90,19 @@ const ItemDetail = () => {
           ))}
         </ul>
         {(!addCart && <ItemCount onAddCart={onAddCart} />) || (
-          <div>
+          <div style={{ width: "300px" }}>
             <Link to="/">
               <button className="btn btn-dark  my-2 me-2">
                 Seguir comprando
               </button>
             </Link>
             <Link to="/cart">
-              <button className="btn btn-warning">Ver carrito</button>
+              <button
+                className="btn btn-warning"
+                style={{ padding: "6px 12px" }}
+              >
+                Ver carrito
+              </button>
             </Link>
           </div>
         )}
