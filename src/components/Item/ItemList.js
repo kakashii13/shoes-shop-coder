@@ -1,6 +1,6 @@
 import Item from "./Item";
-import "../style/ItemList.css";
-import { useCartContext } from "../context/CartContext";
+import "../../style/ItemList.css";
+import { useCartContext } from "../../context/CartContext";
 
 const ItemList = () => {
   const { items } = useCartContext();

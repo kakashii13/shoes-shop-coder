@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardDetail from "./CardDetail.js";
-import { useCartContext } from "../context/CartContext.js";
-import "../style/ItemDetail.css";
+import { useCartContext } from "../../context/CartContext.js";
+import "../../style/ItemDetail.css";
 
 const ItemDetail = () => {
   const { items, totalProducts, setTotalProducts } = useCartContext();
   const [itemDetail, setItemDetail] = useState({});
   const [addCart, setAddCart] = useState(false);
-  const [isSize, setIsSize] = useState(false);
+  const [sizeActive, setSizeActive] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
   const { Id } = useParams();
 
@@ -16,19 +16,46 @@ const ItemDetail = () => {
     setItemDetail(items[Id]);
   }, []);
 
-  const onAddCart = (x) => {
-    if (x != 0) {
+  const onSize = (size) => {
+    setSizeActive(size);
+  };
+
+  const onAddCart = (countState) => {
+    if (countState != 0 && sizeActive != null) {
       setAddCart(true);
-      totalProducts.some((prod) => prod.id === itemDetail.id)
-        ? setTotalProducts(
-            [...totalProducts],
-            (totalProducts[itemDetail.id].stock -= x),
-            (totalProducts[itemDetail.id].count += x)
-          )
-        : setTotalProducts([
+      const test = totalProducts.some((prod) => prod.id === itemDetail.id);
+      if (!test) {
+        setTotalProducts([
+          ...totalProducts,
+          {
+            ...itemDetail,
+            count: countState,
+            stock: itemDetail.stock - countState,
+            sizes: [sizeActive],
+            newId: itemDetail.id + sizeActive,
+          },
+        ]);
+      }
+      // experimental
+      else {
+        const sizeTest = [...totalProducts][itemDetail.id].sizes;
+        if (sizeTest == sizeActive) {
+          const test1 = [...totalProducts];
+          test1[itemDetail.id].count += countState;
+          setTotalProducts(test1);
+        } else {
+          setTotalProducts([
             ...totalProducts,
-            { ...itemDetail, count: x, stock: itemDetail.stock - x },
+            {
+              ...itemDetail,
+              count: countState,
+              stock: itemDetail.stock - countState,
+              sizes: [sizeActive],
+              newId: itemDetail + sizeActive,
+            },
           ]);
+        }
+      }
     }
   };
 
@@ -36,6 +63,8 @@ const ItemDetail = () => {
     if (arrow === "left") {
       if (currentImage != 0) {
         setCurrentImage((currentImage) => currentImage - 1);
+      } else {
+        setCurrentImage(2);
       }
     } else {
       if (currentImage < 2) {
@@ -55,6 +84,8 @@ const ItemDetail = () => {
           itemDetail={itemDetail}
           addCart={addCart}
           currentImage={currentImage}
+          onSize={onSize}
+          sizeActive={sizeActive}
         />
       </section>
       <section className="description d-flex mx-2">

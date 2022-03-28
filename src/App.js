@@ -1,8 +1,8 @@
 import "./style/App.css";
-import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import Cart from "./components/Cart";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/Item/ItemListContainer";
+import ItemDetailContainer from "./components/Detail/ItemDetailContainer";
+import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CartContextProvider from "./context/CartContext";
 import error404 from "./assets/404.jpg";

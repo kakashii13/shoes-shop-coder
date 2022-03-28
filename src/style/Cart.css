@@ -1,0 +1,73 @@
+h3 {
+  /* margin-left: 30px; */
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+/* card */
+
+.list-container li {
+  width: 600px;
+  margin-right: 30px;
+}
+
+.list-container .delete {
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+}
+
+.list-container img {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.list-container .info {
+  padding: 30px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CartPay */
+
+.pay-container {
+  margin: 20px 45px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "resume"
+    "resume2"
+    "pay";
+}
+
+.btn-pay {
+  grid-row-start: pay;
+  grid-row-end: pay;
+}
+
+.resume-container {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.container {
+  height: 81.8%;
+}
+
+@media screen and (min-width: 1000px) {
+  .cart-container {
+    display: flex;
+  }
+
+  .btn-pay {
+    grid-row-start: resume;
+    grid-row-end: resume;
+  }
+}

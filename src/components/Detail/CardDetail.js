@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ItemCount from "./ItemCount.js";
-import "../style/CardDetail.css";
+import ItemCount from "../ItemCount.js";
+import "../../style/CardDetail.css";
 
 const CardDetail = ({
   handleImage,
@@ -9,6 +9,8 @@ const CardDetail = ({
   onAddCart,
   addCart,
   currentImage,
+  onSize,
+  sizeActive,
 }) => {
   return (
     <div className="card-container">
@@ -33,7 +35,12 @@ const CardDetail = ({
           <p>Talles disponibles</p>
           <ul className="detail-size">
             {itemDetail?.sizes?.map((size) => (
-              <li className="size" key={size} style={{ listStyle: "none" }}>
+              <li
+                className={`size ${size == sizeActive && "size-active"}`}
+                key={size}
+                style={{ listStyle: "none" }}
+                onClick={() => onSize(size)}
+              >
                 {size}
               </li>
             ))}
