@@ -10,7 +10,7 @@ const Cart = () => {
   console.log(totalProducts);
   return (
     <div className="container">
-      <h3 style={{ marginLeft: "30px" }}>
+      <h3 style={{ marginLeft: "19px" }}>
         {(totalProducts != "" && "TU CARRITO") || "EL CARRITO ESTA VACIO"}
       </h3>
       {(totalProducts != "" && (

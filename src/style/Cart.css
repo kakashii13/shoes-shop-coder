@@ -9,6 +9,26 @@ h4 {
 
 /* card */
 
+.list-container {
+  padding: 0;
+}
+
+.list-container .card {
+  margin: 10px 0;
+  padding: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .list-container .card {
+    width: 600px;
+    padding: 0;
+    flex-direction: row;
+  }
+}
+
 .list-container li {
   width: 600px;
   margin-right: 30px;
@@ -24,7 +44,7 @@ h4 {
 .list-container img {
   width: 200px;
   height: 200px;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .list-container .info {
@@ -37,7 +57,8 @@ h4 {
 /* CartPay */
 
 .pay-container {
-  margin: 20px 45px;
+  height: 300px;
+  margin: 10px 19px;
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
@@ -51,6 +72,10 @@ h4 {
   grid-row-end: pay;
 }
 
+.btn-pay .btn {
+  width: 100%;
+}
+
 .resume-container {
   border: 1px solid #ddd;
   padding: 10px 20px;
@@ -59,11 +84,21 @@ h4 {
 
 .container {
   height: 81.8%;
+  padding: 0;
+  /* margin: 0 10px; */
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 0 12px;
+    margin: 0 83px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .cart-container {
     display: flex;
+    overflow: hidden;
   }
 
   .btn-pay {

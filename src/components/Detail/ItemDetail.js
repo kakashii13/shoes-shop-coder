@@ -23,26 +23,30 @@ const ItemDetail = () => {
   const onAddCart = (countState) => {
     if (countState != 0 && sizeActive != null) {
       setAddCart(true);
-      const test = totalProducts.some((prod) => prod.id === itemDetail.id);
-      if (!test) {
+      const isProduct = totalProducts.some((prod) => prod.id === itemDetail.id);
+      if (!isProduct) {
         setTotalProducts([
           ...totalProducts,
           {
             ...itemDetail,
             count: countState,
             stock: itemDetail.stock - countState,
-            sizes: [sizeActive],
-            newId: itemDetail.id + sizeActive,
+            sizes: sizeActive,
+            newID: Number(itemDetail.id + sizeActive),
           },
         ]);
-      }
-      // experimental
-      else {
-        const sizeTest = [...totalProducts][itemDetail.id].sizes;
-        if (sizeTest == sizeActive) {
-          const test1 = [...totalProducts];
-          test1[itemDetail.id].count += countState;
-          setTotalProducts(test1);
+      } else {
+        const isSize = [...totalProducts]
+          .filter((x) => x.id == itemDetail.id)
+          .map(({ sizes }) => sizes)
+          .find((x) => x == sizeActive);
+        if (isSize == sizeActive) {
+          const productIndex = totalProducts.findIndex(
+            ({ newID }) => newID == Number(itemDetail.id + sizeActive)
+          );
+          const copyArr = [...totalProducts];
+          const addCount = (copyArr[productIndex].count += countState);
+          setTotalProducts(copyArr);
         } else {
           setTotalProducts([
             ...totalProducts,
@@ -50,8 +54,8 @@ const ItemDetail = () => {
               ...itemDetail,
               count: countState,
               stock: itemDetail.stock - countState,
-              sizes: [sizeActive],
-              newId: itemDetail + sizeActive,
+              sizes: sizeActive,
+              newID: Number(itemDetail.id + sizeActive),
             },
           ]);
         }
