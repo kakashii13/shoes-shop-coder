@@ -3,6 +3,7 @@ const productos = [
     id: 0,
     title: "Adidas Abaca",
     stock: 5,
+    fav: false,
     price: 11999,
     sizes: ["40", "42", "43"],
     pictureUrl:
@@ -19,6 +20,7 @@ const productos = [
     id: 1,
     title: "Nike Air Max 90",
     stock: 5,
+    fav: false,
     price: 25999,
     sizes: ["38", "39", "41"],
     pictureUrl:
@@ -35,6 +37,7 @@ const productos = [
     id: 2,
     title: "Nike Air Max Pre-Day Nn",
     stock: 5,
+    fav: false,
     price: 28499,
     sizes: ["38", "39", "41"],
     pictureUrl:
@@ -51,6 +54,7 @@ const productos = [
     id: 3,
     title: "Vans Old Skool",
     stock: 5,
+    fav: false,
     price: 13300,
     sizes: ["38", "40", "41"],
     pictureUrl:
@@ -65,6 +69,7 @@ const productos = [
     id: 4,
     title: "Adidas Zx 2K Boost Pure",
     stock: 5,
+    fav: false,
     price: 23999,
     sizes: ["38", "39", "44"],
     pictureUrl:
@@ -79,6 +84,7 @@ const productos = [
     id: 5,
     title: "Vans Old Skool",
     stock: 5,
+    fav: false,
     price: 13300,
     sizes: ["38", "40", "41"],
     pictureUrl:
@@ -93,6 +99,7 @@ const productos = [
     id: 6,
     title: "Nike Court Legacy S50",
     stock: 5,
+    fav: false,
     price: 14499,
     sizes: ["38", "39", "41"],
     pictureUrl:
@@ -109,6 +116,7 @@ const productos = [
     id: 7,
     title: "Nike Air Max 2090",
     stock: 5,
+    fav: false,
     price: 21999,
     sizes: ["35", "39", "43"],
     pictureUrl:
@@ -125,6 +133,7 @@ const productos = [
     id: 8,
     title: "Adidas Zx 2K Boost Pure",
     stock: 5,
+    fav: false,
     price: 23999,
     sizes: ["35", "39", "42"],
     pictureUrl:
@@ -141,6 +150,7 @@ const productos = [
     id: 9,
     title: "Nike Air Max Pre-Day Nn",
     stock: 5,
+    fav: false,
     price: 28499,
     sizes: ["35", "39", "42"],
     pictureUrl:

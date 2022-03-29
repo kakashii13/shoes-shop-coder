@@ -1,33 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount.js";
+import ImgContainer from "./ImgContainer.js";
 import "../../style/CardDetail.css";
+import useAddCard from "./useAddCard.js";
 
-const CardDetail = ({
-  handleImage,
-  itemDetail,
-  onAddCart,
-  addCart,
-  currentImage,
-  onSize,
-  sizeActive,
-}) => {
+const CardDetail = ({ itemDetail }) => {
+  const { addCart, onSize, onAddCart, sizeActive } = useAddCard(itemDetail);
   return (
     <div className="card-container">
-      <div className="img-container">
-        <img
-          className="arrow arrow-left"
-          src="https://icongr.am/fontawesome/angle-left.svg?size=30&color=currentColor"
-          onClick={() => handleImage("left")}
-        />
-        <img src={itemDetail?.picturesDetail?.[currentImage]} />
-        <img
-          className="arrow arrow-right"
-          src="https://icongr.am/fontawesome/angle-right.svg?size=30&color=currentColor"
-          onClick={() => handleImage("right")}
-        />
-        {itemDetail?.price > 14999 && <p>Envio Gratis</p>}
-      </div>
+      <ImgContainer itemDetail={itemDetail} />
       <div className="info-container">
         <h3>{itemDetail?.title}</h3>
         <p className="price">$ {itemDetail?.price}</p>

@@ -29,7 +29,6 @@ const CartWidget = () => {
           position: "absolute",
           right: "49.7%",
           top: "12px",
-          // opacity: "0.9",
           fontSize: "10px",
         }}
       >

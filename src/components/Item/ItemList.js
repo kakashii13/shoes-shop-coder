@@ -13,6 +13,7 @@ const ItemList = () => {
           title={item.title}
           price={item.price}
           pictureUrl={item.pictureUrl}
+          fav={item.fav}
         ></Item>
       ))}
     </ul>

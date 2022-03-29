@@ -5,6 +5,7 @@ h5 {
 .card {
   width: 250px;
   cursor: pointer;
+  z-index: 1px;
   /* border: 1px solid #020202d7; */
   /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); */
 }
@@ -27,6 +28,7 @@ h5 {
 .fav {
   position: absolute;
   top: 10px;
+  z-index: 10px;
 }
 
 .card-body p {
