@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CartContextProvider from "./context/CartContext";
 import error404 from "./assets/404.jpg";
 import Footer from "./components/footer/Footer";
+import Favs from "./components/Favs/Favs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/detail/:Id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/favs" element={<Favs />} />
             <Route
               path="/*"
               element={

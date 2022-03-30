@@ -42,18 +42,20 @@ const NavBar = () => {
             <ul className="navbar-nav">
               <li className="nav-item mx-2">
                 <Link to="/" style={{ textDecoration: "none" }}>
-                  <a className="nav-link active">Home</a>
+                  <p className="nav-link active">Home</p>
                 </Link>
               </li>
               <li className="nav-item mx-2">
-                <a className="nav-link active" href="#">
-                  Favs
-                </a>
+                <Link to="/favs" style={{ textDecoration: "none" }}>
+                  <p className="nav-link active" href="#">
+                    Favs
+                  </p>
+                </Link>
               </li>
               <li className="nav-item mx-2">
-                <a className="nav-link active" href="#">
+                <p className="nav-link active" href="#">
                   Contact
-                </a>
+                </p>
               </li>
             </ul>
           </div>
