@@ -8,7 +8,7 @@ import useFavs from "../Favs/useFavs";
 
 const CardDetail = ({ itemDetail }) => {
   const { addCart, onSize, onAddCart, sizeActive } = useAddCard(itemDetail);
-  const { addFav } = useFavs(itemDetail.id);
+  const { addFav } = useFavs(itemDetail?.id);
   return (
     <div className="card-container">
       <ImgContainer itemDetail={itemDetail} />

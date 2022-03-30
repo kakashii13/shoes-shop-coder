@@ -16,7 +16,10 @@ const ItemCount = ({ onAddCart }) => {
   };
 
   return (
-    <div className="d-flex my-4 align-items-center" style={{ width: "270px" }}>
+    <div
+      className="d-flex my-4 align-items-center"
+      style={{ width: "auto", marginRight: "10px" }}
+    >
       <div className="d-flex justify-content-around align-items-center my-2 count-container">
         <span onClick={handleLess}>-</span>
         <div>{state}</div>

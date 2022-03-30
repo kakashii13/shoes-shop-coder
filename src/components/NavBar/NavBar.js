@@ -42,18 +42,24 @@ const NavBar = () => {
             <ul className="navbar-nav">
               <li className="nav-item mx-2">
                 <Link to="/" style={{ textDecoration: "none" }}>
-                  <p className="nav-link active">Home</p>
+                  <p className="nav-link active" style={{ margin: "0" }}>
+                    Home
+                  </p>
                 </Link>
               </li>
               <li className="nav-item mx-2">
                 <Link to="/favs" style={{ textDecoration: "none" }}>
-                  <p className="nav-link active" href="#">
+                  <p
+                    className="nav-link active"
+                    style={{ margin: "0" }}
+                    href="#"
+                  >
                     Favs
                   </p>
                 </Link>
               </li>
               <li className="nav-item mx-2">
-                <p className="nav-link active" href="#">
+                <p className="nav-link active" style={{ margin: "0" }} href="#">
                   Contact
                 </p>
               </li>
