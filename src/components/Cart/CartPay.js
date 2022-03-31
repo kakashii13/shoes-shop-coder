@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import "../../style/Cart.css";
 
 const CartPay = () => {
+  const [free, setFree] = useState(false);
   const { totalProducts } = useCartContext();
   let totalProductsPrice = null;
   let totalProductsCount = null;
@@ -16,6 +17,13 @@ const CartPay = () => {
       .map((prod) => prod.count)
       .reduce((el, acc) => el + acc);
   }
+
+  useEffect(() => {
+    if (totalProductsPrice > 14999) {
+      setFree(true);
+    }
+  }, []);
+
   return (
     <div className="pay-container">
       <section className="btn-pay">
@@ -26,13 +34,19 @@ const CartPay = () => {
       </section>
       <section className="resume-container">
         <h4>Resumen del pedido</h4>
-        <div>{totalProductsCount} PRODUCTOS</div>
+        <p>{totalProductsCount} PRODUCTOS</p>
+        <div className="d-flex justify-content-between">
+          <p>Envio</p>
+          <span>{(free && "Gratis") || `$${600},00`}</span>
+        </div>
         <div
-          className="d-flex justify-content-between my-2"
+          className="d-flex justify-content-between"
           style={{ fontWeight: "bold" }}
         >
           <span>TOTAL</span>
-          <span>$ {totalProductsPrice},00</span>
+          <span>
+            {`${(!free && totalProductsPrice + 600) || totalProductsPrice}`},00
+          </span>
         </div>
       </section>
       <section>

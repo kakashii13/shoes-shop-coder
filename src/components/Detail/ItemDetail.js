@@ -23,7 +23,7 @@ const ItemDetail = () => {
         <h3>Descripción</h3>
         <p>{itemDetail?.description}</p>
       </section>
-      <section className="my-5 mx-2" style={{ width: "100%" }}>
+      <section className="my-5" style={{ width: "100%" }}>
         <h4 style={{ marginLeft: "8px" }}>Nuestra recomendación para vos</h4>
         <Recomendation itemDetail={itemDetail} />
       </section>

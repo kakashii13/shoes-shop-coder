@@ -24,20 +24,15 @@ const Recomendation = ({ itemDetail }) => {
   return (
     <ul className="recomendation-container" style={{ padding: "0" }}>
       {newItems.map((item) => (
-        <Link
-          to={`/detail/${item.id}`}
-          style={{ textDecoration: "none", color: "#000" }}
-        >
-          <li className="card recomendation-card" key={item.id}>
-            <div className="card-img-container">
-              <img className="shoe" src={item.pictureUrl} />
-            </div>
-            <div className="card-body">
-              <h5 className="card-title">{item.title}</h5>
-              <p>$ {item.price}</p>
-            </div>
-          </li>
-        </Link>
+        <li key={item.title} className="card recomendation-card">
+          <div className="card-img-container">
+            <img className="shoe" src={item.pictureUrl} />
+          </div>
+          <div className="card-body">
+            <h5 className="card-title">{item.title}</h5>
+            <p>$ {item.price}</p>
+          </div>
+        </li>
       ))}
     </ul>
   );

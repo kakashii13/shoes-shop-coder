@@ -3,7 +3,7 @@ import "../../style/Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className=" d-flex align-items-center justify-content-between container mx-2">
+      <div className=" d-flex align-items-center justify-content-between mx-2">
         <h3>Shoes shop</h3>
         <div>
           <a
