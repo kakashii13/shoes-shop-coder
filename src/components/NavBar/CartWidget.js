@@ -14,7 +14,10 @@ const CartWidget = () => {
         src="https://icongr.am/material/cart-outline.svg?size=22&color=ffffff"
         className="ms-2"
       />
-      <div className="alert">{totalProductsAlert}</div>
+      {(totalProductsAlert && (
+        <div className="alert">{totalProductsAlert}</div>
+      )) ||
+        ""}
     </div>
   );
 };

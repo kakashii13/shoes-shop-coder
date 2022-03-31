@@ -1,8 +1,10 @@
 .alert-container {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   position: absolute;
-  top: 18px;
-  right: 5%;
+  top: 8px;
+  right: 50px;
 }
 
 .alert {
@@ -21,5 +23,5 @@
 }
 
 .alert-fav {
-  right: 2%;
+  right: 15px;
 }

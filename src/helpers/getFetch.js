@@ -166,9 +166,7 @@ const productos = [
 ];
 
 const getFetch = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(productos);
-  }, 2000);
+  resolve(productos);
 });
 
 export default getFetch;

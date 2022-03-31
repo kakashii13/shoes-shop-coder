@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useCartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
 import "../../style/CardDetail.css";
 
 const Recomendation = ({ itemDetail }) => {

@@ -9,7 +9,7 @@ const Cart = () => {
   const { totalProducts } = useCartContext();
   console.log(totalProducts);
   return (
-    <div className="container" style={{ minHeight: "82%" }}>
+    <div className="container" style={{ minHeight: "95%" }}>
       <h3 style={{ marginLeft: "19px" }}>
         {(totalProducts != "" && "TU CARRITO") || "EL CARRITO ESTA VACIO"}
       </h3>

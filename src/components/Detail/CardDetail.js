@@ -8,7 +8,7 @@ import useFavs from "../Favs/useFavs";
 
 const CardDetail = ({ itemDetail }) => {
   const { addCart, onSize, onAddCart, sizeActive } = useAddCard(itemDetail);
-  const { addFav } = useFavs(itemDetail?.id);
+  const { addFav } = useFavs();
   return (
     <div className="card-container">
       <ImgContainer itemDetail={itemDetail} />
@@ -49,7 +49,7 @@ const CardDetail = ({ itemDetail }) => {
             </div>
           )}
           <img
-            onClick={addFav}
+            onClick={() => addFav(itemDetail?.id)}
             style={{
               width: "25px",
               cursor: "pointer",
