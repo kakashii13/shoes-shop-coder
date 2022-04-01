@@ -5,10 +5,14 @@ import FavsContainer from "./FavsContainer";
 const Favs = () => {
   const { items } = useCartContext();
   const itemsFavs = [...items].filter((item) => item.fav == true);
+
   return (
-    <div style={{ minHeight: "74.3%" }} className="container fav-container">
+    <div
+      style={{ minHeight: "74.3%" }}
+      className="container fav-container my-4"
+    >
       <h2>Tu lista de deseos</h2>
-      <div>
+      <div className="fav-empty">
         <p>{itemsFavs.length} ARTÍCULOS</p>
         {(itemsFavs.length == "" && (
           <p>

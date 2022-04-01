@@ -1,10 +1,11 @@
 import { useCartContext } from "../../context/CartContext";
 
-const useFavs = (id) => {
+const useFavs = () => {
   const { items, setItems } = useCartContext();
   const addFav = (id) => {
     const newItems = [...items];
-    newItems[id].fav = !newItems[id].fav;
+    const findIndex = items.findIndex((item) => item.id === id);
+    newItems[findIndex].fav = !newItems[findIndex].fav;
     setItems(newItems);
   };
 

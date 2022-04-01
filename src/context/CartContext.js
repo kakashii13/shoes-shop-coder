@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import getFetch from "../helpers/getFetch";
+import { getFirestore, getDocs, collection } from "firebase/firestore";
 
 const CartContext = createContext([]);
 
@@ -10,9 +11,25 @@ const CartContextProvider = ({ children }) => {
   const [totalProducts, setTotalProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     getFetch.then((resp) => setItems(resp)).catch((err) => console.log(err));
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
+
   useEffect(() => {
     setTimeout(() => {
-      getFetch.then((resp) => setItems(resp)).catch((err) => console.log(err));
+      const db = getFirestore();
+
+      const queryCollection = collection(db, "items");
+
+      getDocs(queryCollection)
+        .then((resp) =>
+          setItems(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+        )
+        .catch((err) => console.log(err));
+
       setLoading(false);
     }, 2000);
   }, []);
@@ -25,6 +42,7 @@ const CartContextProvider = ({ children }) => {
         items,
         setItems,
         loading,
+        setLoading,
       }}
     >
       {children}

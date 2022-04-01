@@ -15,9 +15,9 @@ const Recomendation = ({ itemDetail }) => {
     copyItems.splice(indexItem, 1);
     setNewItems(copyItems);
 
-    // show only 4 prod
-    copyItems.splice(0, 5);
-    setNewItems(copyItems);
+    // // show only 4 prod
+    // copyItems.splice(0, 5);
+    // setNewItems(copyItems);
   }, [itemDetail]);
 
   return (

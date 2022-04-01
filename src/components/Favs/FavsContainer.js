@@ -1,23 +1,18 @@
 import React from "react";
 import useFavs from "./useFavs";
+import "../../style/Favs.css";
 
 const FavsContainer = ({ itemsFavs }) => {
   const { addFav } = useFavs();
   return (
-    <ul style={{ padding: "0", margin: "20px 0" }}>
+    <ul className="fav-list">
       {itemsFavs.map((item) => (
-        <li className="card" key={item.id}>
+        <li className="card my-3" key={item.id}>
           <div className="card-img-container">
             <img className="shoe" src={item.pictureUrl} />
             <img
+              className="icon-fav"
               onClick={() => addFav(item.id)}
-              style={{
-                width: "15px",
-                cursor: "pointer",
-                position: "absolute",
-                right: "5px",
-                top: "5px",
-              }}
               src={
                 !item?.fav
                   ? "https://icongr.am/fontawesome/heart-o.svg?size=14&color=currentColor"

@@ -1,0 +1,39 @@
+.fav-list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1;
+}
+
+.fav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-fav {
+  width: 15px;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.fav-empty {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .fav-list {
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+  }
+  .fav-container {
+    align-items: start;
+  }
+  .fav-empty {
+    align-items: start;
+  }
+}
