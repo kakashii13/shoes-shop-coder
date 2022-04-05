@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount.js";
 import ImgContainer from "./ImgContainer.js";
@@ -22,7 +22,7 @@ const CardDetail = ({ itemDetail }) => {
               <li
                 className={`size ${size == sizeActive && "size-active"}`}
                 key={size}
-                style={{ listStyle: "none" }}
+                style={{ listStyle: "none", cursor: "pointer" }}
                 onClick={() => onSize(size)}
               >
                 {size}

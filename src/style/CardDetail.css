@@ -102,10 +102,11 @@ h3 {
 /* recomendation */
 
 .recomendation-container {
+  margin: 0 20px;
   display: flex;
   justify-content: space-between;
   overflow-x: scroll;
-  width: 100%;
+  width: 90%;
 }
 .recomendation-container .card {
   min-width: 300px;

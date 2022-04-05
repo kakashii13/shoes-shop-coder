@@ -1,11 +1,40 @@
 .form-container {
   min-height: 83.7%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .form-order {
+  margin: 20px;
   display: flex;
   flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.form-order label {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.form-order input {
+  border: 1px solid #ddd;
+}
+
+.form-order select {
+  margin-bottom: 15px;
+}
+
+.resume {
+  height: auto;
+  margin: 20px;
+}
+
+.incomplete {
+  font-size: 13px;
+  color: rgb(235, 68, 68);
+  margin: 0;
+}
+
+.form-order .input--active {
+  border-bottom: 1px solid rgb(235, 68, 68);
 }

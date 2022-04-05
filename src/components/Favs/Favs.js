@@ -8,7 +8,7 @@ const Favs = () => {
 
   return (
     <div
-      style={{ minHeight: "74.3%" }}
+      style={{ minHeight: "77.2%" }}
       className="container fav-container my-4"
     >
       <h2>Tu lista de deseos</h2>

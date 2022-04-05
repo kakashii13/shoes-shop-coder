@@ -25,6 +25,11 @@
   align-items: center;
 }
 
+.fav-empty p {
+  text-align: center;
+  width: 80%;
+}
+
 @media screen and (min-width: 768px) {
   .fav-list {
     grid-template-columns: repeat(3, auto);
@@ -35,5 +40,9 @@
   }
   .fav-empty {
     align-items: start;
+  }
+  .fav-empty p {
+    text-align: justify;
+    width: 100%;
   }
 }
