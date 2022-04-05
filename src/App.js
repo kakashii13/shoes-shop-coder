@@ -8,6 +8,7 @@ import CartContextProvider from "./context/CartContext";
 import error404 from "./assets/404.jpg";
 import Footer from "./components/footer/Footer";
 import Favs from "./components/Favs/Favs";
+import Orders from "./components/Orders/Orders";
 
 function App() {
   return (
@@ -27,18 +28,11 @@ function App() {
                   className="d-flex justify-content-center align-items-center"
                   style={{ height: "100%" }}
                 >
-                  <img
-                    style={{
-                      width: "50%",
-                      height: "80%",
-                      borderRadius: "50%",
-                      overflow: "hidden",
-                    }}
-                    src={error404}
-                  />
+                  Error 404
                 </div>
               }
             />
+            <Route path="/order" element={<Orders />} />
           </Routes>
           <Footer />
         </div>

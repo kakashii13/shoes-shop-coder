@@ -23,7 +23,7 @@ const Recomendation = ({ itemDetail }) => {
   return (
     <ul className="recomendation-container" style={{ padding: "0" }}>
       {newItems.map((item) => (
-        <li key={item.title} className="card recomendation-card">
+        <li key={item.id} className="card recomendation-card">
           <div className="card-img-container">
             <img className="shoe" src={item.pictureUrl} />
           </div>

@@ -11,13 +11,6 @@ const CartContextProvider = ({ children }) => {
   const [totalProducts, setTotalProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     getFetch.then((resp) => setItems(resp)).catch((err) => console.log(err));
-  //     setLoading(false);
-  //   }, 2000);
-  // }, []);
-
   useEffect(() => {
     setTimeout(() => {
       const db = getFirestore();
@@ -34,6 +27,19 @@ const CartContextProvider = ({ children }) => {
     }, 2000);
   }, []);
 
+  let totalProductsPrice = null;
+  let totalProductsCount = null;
+
+  if (totalProducts != "") {
+    totalProductsPrice = totalProducts
+      .map((prod) => prod.price * prod.count)
+      .reduce((el, acc) => el + acc);
+
+    totalProductsCount = totalProducts
+      .map((prod) => prod.count)
+      .reduce((el, acc) => el + acc);
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -43,6 +49,8 @@ const CartContextProvider = ({ children }) => {
         setItems,
         loading,
         setLoading,
+        totalProductsPrice,
+        totalProductsCount,
       }}
     >
       {children}

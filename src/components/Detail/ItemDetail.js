@@ -12,15 +12,13 @@ const ItemDetail = () => {
   const { Id } = useParams();
 
   useEffect(() => {
-    setTimeout(() => {
-      const db = getFirestore();
-      const queryDoc = doc(db, "items", Id);
-      getDoc(queryDoc)
-        .then((resp) => setItemDetail({ id: resp.id, ...resp.data() }))
-        .catch((err) => console.log(err));
+    const db = getFirestore();
+    const queryDoc = doc(db, "items", Id);
+    getDoc(queryDoc)
+      .then((resp) => setItemDetail({ id: resp.id, ...resp.data() }))
+      .catch((err) => console.log(err));
 
-      setLoading(false);
-    }, 2000);
+    setLoading(false);
   }, []);
 
   return (
