@@ -4,6 +4,8 @@ import FavsContainer from "./FavsContainer";
 
 const Favs = () => {
   const { items } = useCartContext();
+
+  // filtro los items por fav
   const itemsFavs = [...items].filter((item) => item.fav == true);
 
   return (

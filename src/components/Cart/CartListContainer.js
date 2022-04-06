@@ -5,10 +5,15 @@ import "../../style/Cart.css";
 const CartListContainer = () => {
   const { totalProducts, setTotalProducts } = useCartContext();
 
+  // function para eliminar products
   const onDelete = (size) => {
+    //busco el index
     const index = totalProducts.findIndex((prod) => prod.sizes == size);
+    //copia array
     const newTotalProducts = [...totalProducts];
+    //elimino el
     newTotalProducts.splice(index, 1);
+    //seteo el nuevo array
     setTotalProducts(newTotalProducts);
   };
   return (

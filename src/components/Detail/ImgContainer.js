@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const ImgContainer = ({ itemDetail }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
+  // funcion carrusel de img
   const handleImage = (arrow) => {
     if (arrow === "left") {
       if (currentImage != 0) {

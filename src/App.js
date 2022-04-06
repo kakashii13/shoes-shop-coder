@@ -5,10 +5,10 @@ import ItemDetailContainer from "./components/Detail/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CartContextProvider from "./context/CartContext";
-import error404 from "./assets/404.jpg";
 import Footer from "./components/footer/Footer";
 import Favs from "./components/Favs/Favs";
 import Orders from "./components/Orders/Orders";
+import Error404 from "./components/Error404";
 
 function App() {
   return (
@@ -21,17 +21,7 @@ function App() {
             <Route path="/detail/:Id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/favs" element={<Favs />} />
-            <Route
-              path="/*"
-              element={
-                <div
-                  className="d-flex justify-content-center align-items-center"
-                  style={{ height: "100%" }}
-                >
-                  Error 404
-                </div>
-              }
-            />
+            <Route path="/*" element={<Error404 />} />
             <Route path="/order" element={<Orders />} />
           </Routes>
           <Footer />

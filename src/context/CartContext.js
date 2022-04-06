@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import getFetch from "../helpers/getFetch";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 
 const CartContext = createContext([]);
@@ -11,6 +10,7 @@ const CartContextProvider = ({ children }) => {
   const [totalProducts, setTotalProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // seteo db a items
   useEffect(() => {
     setTimeout(() => {
       const db = getFirestore();
@@ -27,6 +27,7 @@ const CartContextProvider = ({ children }) => {
     }, 2000);
   }, []);
 
+  // obtengo precio total y prod totales
   let totalProductsPrice = null;
   let totalProductsCount = null;
 

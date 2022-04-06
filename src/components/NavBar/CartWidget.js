@@ -4,6 +4,7 @@ import "../../style/Alert.css";
 const CartWidget = () => {
   const { totalProducts } = useCartContext();
 
+  // funcion para sumar los prod y agregarlos al cartWidget
   const totalProductsAlert = totalProducts
     ?.map((prod) => prod.count)
     .reduce((el, acc) => el + acc, null);

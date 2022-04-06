@@ -1,5 +1,6 @@
 import { useCartContext } from "../../context/CartContext";
 
+// hook para agregar a fav
 const useFavs = () => {
   const { items, setItems } = useCartContext();
   const addFav = (id) => {

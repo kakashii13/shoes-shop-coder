@@ -38,3 +38,15 @@
 .form-order .input--active {
   border-bottom: 1px solid rgb(235, 68, 68);
 }
+
+@media screen and (min-width: 990px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-order {
+    width: 400px;
+    height: 400px;
+  }
+}

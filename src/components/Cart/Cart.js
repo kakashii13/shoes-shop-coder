@@ -6,6 +6,7 @@ import CartEmpty from "./CartEmpty";
 import CartPay from "./CartPay";
 
 const Cart = () => {
+  // recibo los productos
   const { totalProducts } = useCartContext();
   return (
     <div className="container" style={{ minHeight: "81.7%" }}>

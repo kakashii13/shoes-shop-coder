@@ -5,6 +5,7 @@ const Resume = () => {
   const [free, setFree] = useState(false);
   const { totalProductsPrice, totalProductsCount } = useCartContext();
 
+  // setea los productos free
   useEffect(() => {
     if (totalProductsPrice > 14999) {
       setFree(true);

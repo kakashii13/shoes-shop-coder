@@ -11,6 +11,7 @@ const ItemDetail = () => {
   const [itemDetail, setItemDetail] = useState();
   const { Id } = useParams();
 
+  // obtengo data de un producto por id
   useEffect(() => {
     const db = getFirestore();
     const queryDoc = doc(db, "items", Id);
