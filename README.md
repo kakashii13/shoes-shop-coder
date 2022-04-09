@@ -16,6 +16,12 @@ Las tecnologias que utilizamos:
 
 - [React JS](https://reactjs.org/) - A JavaScript library for building user interfaces!
 
+## Librerias
+ 
+Las librerias que utilizamos: 
+
+- Bootstrap
+
 ## Creator
 
 - Dominguez Matias
