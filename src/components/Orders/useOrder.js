@@ -13,6 +13,7 @@ const useOrder = () => {
     email: "",
     payment: "",
   });
+  const [orderId, setOrderId] = useState("");
 
   // cambiar ruta a /
   let navigate = useNavigate();
@@ -44,7 +45,10 @@ const useOrder = () => {
     // envio obj a firebase con los datos de la compra
     const db = getFirestore();
     const queryCollection = collection(db, "orders");
-    addDoc(queryCollection, order).then((resp) => console.log(resp));
+
+    addDoc(queryCollection, order).then(({ id }) => {
+      setOrderId(id);
+    });
     setComplete(true);
     setTimeout(() => {
       routeChange();
@@ -52,8 +56,11 @@ const useOrder = () => {
     }, 2000);
   };
   useEffect(() => {
-    if (complete) alert("Felicidades, has realizado tu pedido!");
-  }, [complete]);
+    if (complete)
+      alert(
+        `Felicidades, has realizado tu pedido!. El id de tu compra es ${orderId}`
+      );
+  }, [orderId]);
 
   return { userData, setUserData, order };
 };

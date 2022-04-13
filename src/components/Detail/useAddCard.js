@@ -5,6 +5,7 @@ const useAddCard = (itemDetail) => {
   const { totalProducts, setTotalProducts } = useCartContext();
   const [addCart, setAddCart] = useState(false);
   const [sizeActive, setSizeActive] = useState(null);
+  const [error, setError] = useState(false);
 
   // seteo un size
   const onSize = (size) => {
@@ -13,9 +14,10 @@ const useAddCard = (itemDetail) => {
 
   // funcion agregar al carrito
   const onAddCart = (countState) => {
-    if (!sizeActive) console.log("error");
+    if (countState == 0 || sizeActive == null) setError(true);
     // validacion
     if (countState != 0 && sizeActive != null) {
+      setError(false);
       setAddCart(true);
       // chequeo prod existe
       const isProduct = totalProducts.some((prod) => prod.id === itemDetail.id);
@@ -28,7 +30,7 @@ const useAddCard = (itemDetail) => {
             count: countState,
             stock: itemDetail.stock - countState,
             sizes: sizeActive,
-            newID: Number(itemDetail.id + sizeActive),
+            newID: itemDetail.id + sizeActive,
           },
         ]);
       } else {
@@ -41,7 +43,7 @@ const useAddCard = (itemDetail) => {
         if (isSize == sizeActive) {
           // busqueda por index
           const productIndex = totalProducts.findIndex(
-            ({ newID }) => newID == Number(itemDetail.id + sizeActive)
+            ({ newID }) => newID == itemDetail.id + sizeActive
           );
           const copyArr = [...totalProducts];
           // aumenta el count
@@ -57,7 +59,7 @@ const useAddCard = (itemDetail) => {
               count: countState,
               stock: itemDetail.stock - countState,
               sizes: sizeActive,
-              newID: Number(itemDetail.id + sizeActive),
+              newID: itemDetail.id + sizeActive,
             },
           ]);
         }
@@ -70,6 +72,7 @@ const useAddCard = (itemDetail) => {
     onSize,
     onAddCart,
     sizeActive,
+    error,
   };
 };
 

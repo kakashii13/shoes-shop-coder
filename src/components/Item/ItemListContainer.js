@@ -1,6 +1,7 @@
 import ItemList from "./ItemList";
 import { useCartContext } from "../../context/CartContext";
 import Loading from "../Loading/Loading";
+import Filter from "../Filter/Filter";
 
 const ItemListContainer = () => {
   const { loading } = useCartContext();
@@ -9,7 +10,12 @@ const ItemListContainer = () => {
       className="d-flex justify-content-center align-items-center"
       style={{ minHeight: "81.5%" }}
     >
-      {(loading && <Loading />) || <ItemList />}
+      {(loading && <Loading />) || (
+        <div>
+          <Filter />
+          <ItemList />
+        </div>
+      )}
     </div>
   );
 };

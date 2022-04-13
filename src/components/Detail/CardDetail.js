@@ -7,7 +7,8 @@ import useAddCard from "./useAddCard.js";
 import useFavs from "../Favs/useFavs";
 
 const CardDetail = ({ itemDetail }) => {
-  const { addCart, onSize, onAddCart, sizeActive } = useAddCard(itemDetail);
+  const { addCart, onSize, onAddCart, sizeActive, error } =
+    useAddCard(itemDetail);
   const { addFav } = useFavs();
   return (
     <div className="card-container">
@@ -61,6 +62,12 @@ const CardDetail = ({ itemDetail }) => {
             }
           />
         </div>
+
+        {error ? (
+          <p style={{ color: "#d64949" }}>Debe seleccionar talle y cantidad</p>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

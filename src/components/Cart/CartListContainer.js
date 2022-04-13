@@ -37,6 +37,10 @@ const CartListContainer = () => {
           </div>
         </li>
       ))}
+
+      <button className="btn btn-dark" onClick={() => setTotalProducts([])}>
+        Vaciar carrito
+      </button>
     </ul>
   );
 };
