@@ -27,6 +27,7 @@ const Orders = () => {
             setUserData({ ...userData, payment: e.target.value })
           }
         >
+          <option>Seleccione un metodo</option>
           <option>Visa</option>
           <option>MasterCard</option>
           <option>American</option>
